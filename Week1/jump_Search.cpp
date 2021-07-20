@@ -24,14 +24,15 @@ int main(){
         }
         s=2;
         while(s/2<=n){
-            if(a[s]>=k){
+            if(a[s]>k||s>n-1){
                 for(int j=s/2;j<=s&&j<n;j++){
                     if(a[j]==k){
                         cout<<"The element "<<k<<" is present in the array."<<endl;
-                        cout<<"Number of comparisons: "<<c+3+j-s/2;
+                        cout<<"Number of comparisons: "<<c+3;
                         f=1;
                         break;
                     }
+                    c++;
                 }
                 if(f==1){
                     break;
@@ -42,7 +43,7 @@ int main(){
         }
         if(f==0){
             cout<<"The element "<<k<<" is not present in the array."<<endl;
-            cout<<"Number of comparisons: "<<n-s/4+c+1;
+            cout<<"Number of comparisons: "<<c+1;
         }
     }
     return 0;
