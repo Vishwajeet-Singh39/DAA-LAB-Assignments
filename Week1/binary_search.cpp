@@ -9,7 +9,7 @@ int main(){
         cout<<endl<<"Enter the size of array: ";
         cin>>n;
         int a[n];
-        cout<<"Enter the elements(non negative integers): "<<endl;
+        cout<<"Enter the sorted elements(non negative integers): "<<endl;
         for(int i=0;i<n;i++){
             cin>>a[i];
         }
